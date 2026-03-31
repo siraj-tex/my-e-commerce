@@ -9,7 +9,7 @@ function Nav() {
 
   return (
     <div className='nav navbar'>
-      <h2>my com</h2>
+      <h2>MAINUL STORE</h2>
       
       <div className={`nav-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
         <a href="/">Home</a>
