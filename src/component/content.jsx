@@ -57,25 +57,12 @@ function Content() {
           onChange={handleInputChange}
           onFocus={() => searchQuery && setShowSuggestions(true)}
         />
-        {showSuggestions && suggestions.length > 0 && (
-          <div className="suggestions" style={{
-            position: 'absolute',
-            background: 'white',
-            border: '1px solid #ccc',
-            maxHeight: '200px',
-            overflowY: 'auto',
-            zIndex: 1000,
-            width: '100%'
-          }}>
+{showSuggestions && suggestions.length > 0 && (
+          <div className="suggestions">
             {suggestions.map(suggestion => (
               <div
                 key={suggestion.id}
                 className="suggestion-item"
-                style={{
-                  padding: '10px',
-                  cursor: 'pointer',
-                  borderBottom: '1px solid #eee'
-                }}
                 onClick={() => handleSuggestionClick(suggestion)}
               >
                 <strong>{suggestion.title}</strong> - {suggestion.desc}
@@ -85,13 +72,11 @@ function Content() {
         )}
         <button onClick={handleSearch}>Search</button>
       </div>
-      <div className='list'>
+      <div className='card-container'>
         <h3>List of items ({filteredItems.length})</h3>
-        <div className='filter'>
-          {filteredItems.map(item => (
-            <Card key={item.id} title={item.title} desc={item.desc} image={image} />
-          ))}
-        </div>
+        {filteredItems.map(item => (
+          <Card key={item.id} title={item.title} desc={item.desc} image={image} />
+        ))}
       </div>
     </div>
   )
