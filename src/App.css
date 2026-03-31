@@ -6,7 +6,31 @@
   background: linear-gradient(135deg, #e40cc3, #8b1da6);
   color: white;
   box-shadow: 0 2px 10px rgba(228, 12, 195, 0.3);
+  
 }
+/* Navbar की मुख्य सेटिंग */
+.nav.navbar {
+  position: relative; /* ताकि इसके अंदर के elements absolute position ले सकें */
+  z-index: 1000;      /* इसे कंटेंट से ऊपर रखने के लिए */
+  /* अन्य styles जैसे background-color सुनिश्चित करें */
+}
+
+/* जब मोबाइल मेनू खुला हो */
+.nav-links.mobile-open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;   /* इसे कंटेंट के ऊपर तैरने (float) के लिए */
+  top: 100%;            /* यह navbar के ठीक नीचे से शुरू होगा */
+  left: 1rem;           /* बायीं ओर से गैप */
+  right: 1rem;          /* दायीं ओर से गैप (ओवरफ्लो रोकने के लिए) */
+  padding: 1rem;        /* अंदर के लिंक्स के लिए जगह */
+  background-color: #ffffff; 
+  color: #333333;       /* टेक्स्ट कलर बदलें ताकि लिंक्स दिखाई दें */
+  z-index: 999;         /* इसे सर्च बार और कंटेंट के ऊपर दिखाने के लिए */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* थोड़ा सा शैडो ताकि यह अलग दिखे */
+  border-radius: 8px;   /* कोनों को थोड़ा गोल करने के लिए */
+}
+
 a:-webkit-any-link {
     color: inherit;
     cursor: pointer;

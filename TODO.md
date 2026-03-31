@@ -1,12 +1,9 @@
-# Task: Restructure code with proper containers and ensure 3 cards per line
+# TODO: Make navbar and search bar responsive
 
 ## Steps:
-# Task Complete ✅
+- [x] 1. Create TODO.md with steps
+- [x] 2. Update nav.jsx: Add nav-links wrapper and hamburger menu toggle state
+- [x] 3. Update index.css: Add responsive styles for navbar (hamburger, mobile menu) and search bar (stack on mobile)
+- [ ] 4. Test responsiveness
+- [ ] 5. Complete task
 
-All steps finished:
-- [x] Step 1: Edit src/component/content.jsx
-- [x] Step 2: Edit src/App.css 
-- [x] Step 3: Test with `npm run dev`
-- [x] Step 4: Layout verified (3 cards/row desktop, responsive)
-
-App now has clean container structure with exactly 3 cards per line.

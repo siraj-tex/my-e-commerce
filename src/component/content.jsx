@@ -30,6 +30,12 @@ function Content() {
     setShowSuggestions(false)
   }
 
+  const handleClearSearch = () => {
+    setSearchQuery('')
+    setFilteredItems(allItems)
+    setShowSuggestions(false)
+  }
+
   const handleInputChange = (e) => {
     const query = e.target.value
     setSearchQuery(query)
